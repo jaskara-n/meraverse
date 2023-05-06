@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import Movements from "./movement";
+import polygon from "./web3";
 
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0xf1ed11);
@@ -19,16 +20,10 @@ const area_material = new THREE.MeshPhongMaterial({ color: 0xf1edff });
 const area = new THREE.Mesh(area_geometry, area_material);
 scene.add(area);
 
-const geometry = new THREE.BoxGeometry(2, 2, 2);
-const material = new THREE.MeshPhongMaterial({ color: 0xf1ed11 });
-const cube = new THREE.Mesh(geometry, material);
-scene.add(cube);
-
-const cylinder_geometry = new THREE.CylinderGeometry(5, 5, 20, 32);
-const cylinder_material = new THREE.MeshPhongMaterial({ color: 0x1f3f00 });
-const cylinder = new THREE.Mesh(cylinder_geometry, cylinder_material);
-scene.add(cylinder);
-cylinder.position.set(20, 5, 0);
+// const geometry = new THREE.BoxGeometry(2, 2, 2);
+// const material = new THREE.MeshPhongMaterial({ color: 0xf1ed11 });
+// const cube = new THREE.Mesh(geometry, material);
+// scene.add(cube);
 
 camera.position.z = 5;
 camera.position.set(10, 5, 40);
@@ -41,10 +36,10 @@ scene.add(ambient_light);
 function animate() {
   requestAnimationFrame(animate);
 
-  cube.rotation.x += 0.05;
-  cube.rotation.y += 0.01;
-  cube.rotation.z += 0.01;
-  cylinder.rotation.z += 0.01;
+  // cube.rotation.x += 0.05;
+  // cube.rotation.y += 0.01;
+  // cube.rotation.z += 0.01;
+  // cylinder.rotation.z += 0.01;
 
   //for left key
   if (Movements.isPressed(37)) {
@@ -71,3 +66,22 @@ function animate() {
 }
 
 animate();
+
+polygon.then((result) => {
+  result.nft.forEach((object, index) => {
+    if (index <= result.supply) {
+      const cube_geometry = new THREE.CubeGeometry(
+        object.w,
+        object.h,
+        object.d
+      );
+      const cube_material = new THREE.MeshPhongMaterial({
+        color: 0x1f3f00,
+      });
+      const nft = new THREE.Mesh(cube_geometry, cube_material);
+
+      nft.position.set(object.x, object.y, object.z);
+      scene.add(nft);
+    }
+  });
+});
