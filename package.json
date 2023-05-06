@@ -1,7 +1,16 @@
 {
   "dependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@nomiclabs/hardhat-etherscan": "^3.1.7",
     "@openzeppelin/contracts": "^4.8.3",
+    "dotenv": "^16.0.3",
+    "hardhat": "^2.14.0",
+    "hardhat-deploy": "^0.11.28",
+    "hardhat-deploy-ethers": "^0.3.0-beta.13",
+    "hardhat-etherscan": "^1.0.1",
+    "hardhat-gas-reporter": "^1.0.9",
     "three": "^0.152.2",
-    "vite": "^4.3.5"
+    "vite": "^4.3.5",
+    "web3": "^1.9.0"
   }
 }
