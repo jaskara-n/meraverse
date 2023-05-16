@@ -1,4 +1,6 @@
-import abi from "../deployments/mumbai/metaverse.json";
+//displays accounts, total supply, max supply, all objects
+
+import abi from "../artifacts/contracts/metaverse.sol/metaverse.json" assert { type: "json" };
 import Web3 from "web3";
 
 const polygon = new Promise((res, rej) => {

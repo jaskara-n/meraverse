@@ -2,7 +2,7 @@ const { ethers } = require("hardhat");
 const abi = require("../artifacts/contracts/metaverse.sol/metaverse.json").abi;
 
 async function mintNFT() {
-  const value = ethers.utils.parseUnits("0.1", 1);
+  const value = ethers.utils.parseUnits("0.1", 10);
   const contract = await ethers.getContractAt(
     abi,
     "0xb64723B5d46605d6f74F128037B4F87a9C739895"
