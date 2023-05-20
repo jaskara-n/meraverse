@@ -11,6 +11,7 @@ In this metaverse, users can mint a NFT from the frontend itself, and after mint
     `yarn add`
     
     or if using npm,
+    
     `npm install`
     
 3. If you want to redeploy the contract on any other testnet or u want only your own NFTs to show, deploy the contract using 
@@ -18,6 +19,7 @@ In this metaverse, users can mint a NFT from the frontend itself, and after mint
     `yarn hardhat deploy`
     
     or if using npm,
+    
     `npm hardhat deploy`
     
     make sure to change the address in web3.js, main.js and give the deployed address for the contract.
@@ -27,6 +29,7 @@ In this metaverse, users can mint a NFT from the frontend itself, and after mint
    ` yarn vite dev `
    
     or if using npm,
+    
    ` npm vite dev`
    
 5. You will see a prompt to commect with metamask, let the connection go through and then give the details for the NFT in the form, the width , height, etc
