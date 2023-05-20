@@ -7,19 +7,25 @@ In this metaverse, users can mint a NFT from the frontend itself, and after mint
 1. Firstly, clone the repo to your local machine
 
 2. Then, run this command in the command line to install all the dependencies required for the project to run.
+
     `yarn add`
+    
     or if using npm,
     `npm install`
     
 3. If you want to redeploy the contract on any other testnet or u want only your own NFTs to show, deploy the contract using 
+
     `yarn hardhat deploy`
+    
     or if using npm,
     `npm hardhat deploy`
     
     make sure to change the address in web3.js, main.js and give the deployed address for the contract.
     
 4. Run this command to open it on localhost
+
    ` yarn vite dev `
+   
     or if using npm,
    ` npm vite dev`
    
