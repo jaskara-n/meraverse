@@ -2,6 +2,10 @@
 This is a metaverse on a small scale that is made using three.js,web3.js.
 In this metaverse, users can mint a NFT from the frontend itself, and after minting the NFT, the NFT appears on the metaverse in the form of a 3d object.
 
+# Requirements
+    1. node.js installed
+    2. metamask wallet should be setup with some test eth for whatever testnet you are deploying to
+
 # Getting started
 
 1. Firstly, clone the repo to your local machine
@@ -50,6 +54,12 @@ In this metaverse, users can mint a NFT from the frontend itself, and after mint
 
 
 ![Screenshot (18)](https://github.com/jaskara-n/meraverse/assets/106918939/704c2360-067d-47eb-b4d8-7854e4d6258c)
+
+
+# Known issues
+    Sometimes the yarn hardhat deploy command dosen't work, if that is the case run 
+    
+    `yarn hardhat run deploy/deploy.js`
     
     
  
